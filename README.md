@@ -1,7 +1,7 @@
 # KutuSorusu
 Kutu Sorusunın çıktısı
 
-![kutuSorusuCiktisi](https://github.com/ertugrulakdag/KutuSorusu/assets/11241955/70126338-f0b1-46fb-bb58-a6e3652c740f)
+![kutuSorusuCiktisi](https://github.com/ertugrulakdag/KutuSorusu/assets/11241955/0f6c4fe4-a8c3-4ab3-9deb-2b907395f7fa)
 
 Soru ;
 
