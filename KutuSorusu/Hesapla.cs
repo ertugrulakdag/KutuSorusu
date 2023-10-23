@@ -5,7 +5,7 @@ namespace KutuSorusu
 {
     public class Kutu
     {
-        public async Task<int> AlaniniHesapla(int[] kutuBoyutlari)
+        public async Task<KeyValuePair<string, int>> AlaniniHesapla(int[] kutuBoyutlari)
         {
             //Dizinin her elemanı için yükseklik * taban'ı hesaplarım.
             var keyValue = new List<KeyValuePair<string, int>>();//Her elemanın sonucunu keyValue KeyValuePair'sine yazmak için hazırlık yaptım.
@@ -33,10 +33,10 @@ namespace KutuSorusu
 
                 ikinciKutuAlani = await IkinciKutuHesapla(ikinciKutuDizisi);
                 int alan = birinciKutuAlani + ikinciKutuAlani;
-                keyValue.Add(new KeyValuePair<string, int>($"{i + 1}.Hesap", alan));//Her elemanı KeyValuePair'ye eklerim.
+                keyValue.Add(new KeyValuePair<string, int>($" Birinci Kutu:{string.Join(",", birinciKutuDizisi)} İkinci Kutu:{string.Join(",", ikinciKutuDizisi)}" , alan));//Her elemanı KeyValuePair'ye eklerim.
             }
  
-            return keyValue.OrderBy(e => e.Value).FirstOrDefault().Value;
+            return keyValue.OrderBy(e => e.Value).FirstOrDefault();
         }
         private async Task<int> BirinciKutuHesapla(int[] birinciKutuBoyutlari)
         {
